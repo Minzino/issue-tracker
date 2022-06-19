@@ -82,9 +82,10 @@ jobs:
         run: aws s3 cp --region ap-northeast-2 --acl private ./issue-tracker.zip s3://issue-tracker-deploy-bucket/
 
       - name: Start CodeDeploy
-        run: aws deploy create-deployment \
-        --application-name Issue-Tracker-WAS-Deploy \
-        --deployment-group-name Issue-Tracker-WAS-Deploy-Group \
-        --s3-location bucket=issue-tracker-deploy-bucket,key=issue-tracker.zip,bundleType=zip
+        run: |
+          aws deploy create-deployment \
+          --application-name Issue-Tracker-WAS-Deploy \
+          --deployment-group-name Issue-Tracker-WAS-Deploy-Group \
+          --s3-location bucket=issue-tracker-deploy-bucket,key=issue-tracker.zip,bundleType=zip
 
 
