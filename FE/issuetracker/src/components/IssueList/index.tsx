@@ -15,18 +15,18 @@ function IssueList() {
         </S.FilterBar>
         <S.IssueListTopRight>
           <S.Buttons>
-            <S.LabelBtn>
+            <S.LabelBtn to="/label">
               <I.tag />
               <S.BtnText>레이블</S.BtnText>
               <S.BtnContentCount>(3)</S.BtnContentCount>
             </S.LabelBtn>
-            <S.MileStoneBtn>
+            <S.MileStoneBtn to="/milestone">
               <I.milestone />
               <S.BtnText>마일스톤</S.BtnText>
               <S.BtnContentCount>(2)</S.BtnContentCount>
             </S.MileStoneBtn>
           </S.Buttons>
-          <S.IssueOption>
+          <S.IssueOption to="/newIssue">
             <I.plus />
             이슈 작성
           </S.IssueOption>

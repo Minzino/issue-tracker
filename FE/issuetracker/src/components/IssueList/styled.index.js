@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { mixin } from 'design/GlobalStyles';
+import { Link } from 'react-router-dom';
 
 export const IssueListWrap = styled.div`
   ${mixin.flexbox({ dir: 'column', vertical: 'center' })};
@@ -46,7 +47,7 @@ export const Buttons = styled.div`
   border-radius: 11px;
 `;
 
-export const LabelBtn = styled.button`
+export const LabelBtn = styled(Link)`
   ${mixin.flexbox({ horizontal: 'center', vertical: 'center' })};
   border: 1px solid ${({ theme }) => theme.backgroundColors.gray4};
   width: 160px;
@@ -55,6 +56,7 @@ export const LabelBtn = styled.button`
   ${({ theme }) => theme.fontStyles.linkSmall};
   color: ${({ theme }) => theme.fontColors.gray2};
   gap: 8px;
+  text-decoration: none;
 `;
 export const MileStoneBtn = styled(LabelBtn)`
   border-radius: 0px 11px 11px 0px;
@@ -64,7 +66,7 @@ export const BtnText = styled.div`
   color: ${({ theme }) => theme.fontColors.gray2};
 `;
 export const BtnContentCount = styled(BtnText)``;
-export const IssueOption = styled.div`
+export const IssueOption = styled(Link)`
   ${mixin.flexbox({ horizontal: 'center', vertical: 'center' })};
   background: ${({ theme }) => theme.backgroundColors.blue2};
   gap: 4px;
@@ -73,4 +75,5 @@ export const IssueOption = styled.div`
   height: 100%;
   ${({ theme }) => theme.fontStyles.linkSSmall};
   color: ${({ theme }) => theme.fontColors.gray1};
+  text-decoration: none;
 `;
