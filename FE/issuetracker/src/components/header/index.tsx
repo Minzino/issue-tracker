@@ -5,7 +5,7 @@ function Header() {
   const isLoginPage = window.location.href === `http://localhost:3000/`;
   return (
     <S.HeaderWrap checkPage={isLoginPage}>
-      <S.Title to="/issueList">Issue Tracker</S.Title>
+      <S.Title to="/issueList">philssue Tracker</S.Title>
       <S.AccountImg src={AccountSrc} />
     </S.HeaderWrap>
   );
